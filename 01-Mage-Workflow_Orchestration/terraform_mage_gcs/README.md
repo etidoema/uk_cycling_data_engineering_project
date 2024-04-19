@@ -145,6 +145,12 @@ Once we are done, two resources will be added to Google Cloud.
 
 Now let's head over to our Google Cloud project, then navigate to Cloud Run to see what is running.
 
+![Permissions](img/evi.png)
+
+Click on your project, then copy the link and run it in Google Chrome. Once done, you have successfully pushed your project app to Google Cloud.
+
+
+
 
 
 
