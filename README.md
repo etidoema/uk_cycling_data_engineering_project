@@ -1,6 +1,7 @@
 # UK Cycling Data Engineering Project
 
 ![Dashboard](img/mage_project1.jpg)
+Credits : Edidiong Esu for the workflow image.
 
 ## Tech Stack
 - **Workflow Orchestration**: Mage
