@@ -81,5 +81,71 @@ Now that we've completed the previous steps, let's add permissions in Google Clo
 ![Permissions](img/permissions.png)
 
 
+## Deploying Mage to Google Cloud
+
+1. Head back to Git Bash.
+2. Navigate to your Terraform repository.
+3. Download or pull the Mage Terraform template.
+
+
+```bash
+$ git clone https://github.com/mage-ai/mage-ai-terraform-templates.git
+
+User@TIDO-LAPTOP MINGW64 ~/Desktop/projects/uk_cycling_end_to_end_data_engineering_project
+$ cd mage-ai-terraform-templates
+
+User@TIDO-LAPTOP MINGW64 ~/Desktop/projects/uk_cycling_end_to_end_data_engineering_project/mage-ai-terraform-templates (master)
+$ ls -la
+total 57
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 ./
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 ../
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 .git/
+-rw-r--r-- 1 User 197608   753 Apr  6 23:28 .gitignore
+-rw-r--r-- 1 User 197608 11558 Apr  6 23:28 LICENSE
+-rw-r--r-- 1 User 197608    96 Apr  6 23:28 README.md
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 aws/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 aws-code-pipeline/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 aws-dev/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 aws-eks/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 azure/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 digitalocean/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 gcp/
+drwxr-xr-x 1 User 197608     0 Apr  6 23:28 gcp-dev/
+
+User@TIDO-LAPTOP MINGW64 ~/Desktop/projects/uk_cycling_end_to_end_data_engineering_project/mage-ai-terraform-templates (master)
+$ cd gcp
+
+User@TIDO-LAPTOP MINGW64 ~/Desktop/projects/uk_cycling_end_to_end_data_engineering_project/mage-ai-terraform-templates/gcp (master)
+$ code .
+ ```
+
+Once that it's done, let's edit our Terraform template.
+
+1. In `variables.tf`, set the `project_id` default value to your GCP project ID.
+2. Enable the Cloud Filestore API:
+   - Visit the Google Cloud Console.
+   - Navigate to "APIs & Services" > "Library".
+   - Search for "Cloud Filestore API".
+   - Click on the API and enable it.
+
+Perform the following steps to solve the "Quota 'SECURITY_POLICY_RULES' exceeded. Limit: 0.0 globally" error when running `terraform apply`:
+
+1. Delete the `load_balancer.tf` file:
+   - Delete the `load_balancer.tf` file from your Terraform project.
+2. Comment or delete the relevant lines in `main.tf`:
+   - In the `main.tf` file, comment or delete the rows that differentiate the load balancer. Specifically, comment or delete lines 148, 166, 167, and 168.
+
+Once you have made these changes, you can run `terraform destroy` to delete any previously created infrastructure from failed attempts. Then, you can re-run `terraform apply` to deploy your infrastructure without the load balancer, which should resolve the quota exceeded error.
+
+It's important to note that by removing the load balancer, you will lose its functionality in your deployment. However, you will be able to continue with the deployment.
+
+Please note that this solution is specific to the issue related to the load balancer and security policy quota on GCP. If you encounter a different error or have a different issue, please provide more details so that we can assist you further.
+
+Once we are done, two resources will be added to Google Cloud.
+
+Now let's head over to our Google Cloud project, then navigate to Cloud Run to see what is running.
+
+
+
 
 
