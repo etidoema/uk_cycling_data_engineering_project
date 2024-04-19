@@ -1,2 +1,4 @@
+## Dashboard
+
 ![Dashboard](dashboard.png)
 
