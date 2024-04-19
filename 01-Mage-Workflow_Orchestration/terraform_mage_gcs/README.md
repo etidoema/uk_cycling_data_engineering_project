@@ -150,6 +150,10 @@ Now let's head over to our Google Cloud project, then navigate to Cloud Run to s
 Click on your project, then copy the link and run it in Google Chrome. Once done, you have successfully pushed your project app to Google Cloud.
 
 
+[Etido_Ema-Mage-App](https://mage-data-prep-itvpv4onqa-wl.a.run.app)
+
+
+
 
 
 
