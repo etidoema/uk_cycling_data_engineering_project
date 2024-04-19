@@ -50,4 +50,19 @@ provider "google" {
 
 I prefer not to store my credentials directly in my code, i can utilize environment variables or Git Bash configurations. Here's how to do it:
 
+![Google Credentials in Git Bash](img/google_credentials_bash.png)
+
+Check out one of my publications. This will help you understand how to set up a GCP account for Terraform more effectively.
+
+[How to Set Up a Service Account in GCP for a Data Engineering Project](https://medium.com/@1box/how-to-set-up-a-service-account-in-gcp-for-a-data-engineering-project-5981167e6d29)
+
+The next step is to authenticate Google Cloud credentials in our `gcloud` CLI.
+
+### Overview
+Here, we're creating an app using Google Cloud Run and setting up persistent storage on Google Cloud. Follow these steps to proceed:
+
+1. This action will direct us to the authentication page of the `gcloud` CLI, where we can authenticate using our Gmail account and system credentials.
+
+
+
 
