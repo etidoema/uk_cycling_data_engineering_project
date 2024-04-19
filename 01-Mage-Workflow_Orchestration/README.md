@@ -1,6 +1,6 @@
 # Mage
 
-![ETL Pipeline](mage_logo.png)
+![ETL Pipeline](img/mage_logo.png)
 
 
 ## Getting Started
@@ -203,8 +203,13 @@ def export_data_to_google_cloud_storage(df: DataFrame, **kwargs) -> None:
 
 #### This is how our ETL Pipeline look like.
 
-![ETL Pipeline](etl_pipeline_partitioned.png)
+![ETL Pipeline](img/etl_pipeline_partitioned.png)
 
 #### The data has been exported to google cloud and also partitioned by day.
 
-![ETL Pipeline](partitioned_cycling_data.png)
+![ETL Pipeline](img/partitioned_cycling_data.png)
+
+
+#### These are the files that have been uploaded to our google cloud storage.
+
+![ETL Pipeline](img/gcs_files.png)
