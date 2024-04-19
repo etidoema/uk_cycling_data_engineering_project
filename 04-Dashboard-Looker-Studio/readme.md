@@ -1,1 +1,2 @@
+![Dashboard](dashboard.png)
 
