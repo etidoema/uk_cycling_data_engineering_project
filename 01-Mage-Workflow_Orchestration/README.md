@@ -1,5 +1,8 @@
 # Mage
 
+![ETL Pipeline](mage_logo.png)
+
+
 ## Getting Started
 To start Mage, navigate to the Mage directory and launch it using Docker.
 
@@ -197,5 +200,11 @@ def export_data_to_google_cloud_storage(df: DataFrame, **kwargs) -> None:
     )
 ```
 
+
+#### This is how our ETL Pipeline look like.
+
+![ETL Pipeline](etl_pipeline_partitioned.png)
+
 #### The data has been exported to google cloud and also partitioned by day.
 
+![ETL Pipeline](partitioned_cycling_data.png)
