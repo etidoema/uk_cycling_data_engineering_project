@@ -1,6 +1,6 @@
 # Mage
 
-![ETL Pipeline](img/mage_logo.png)
+![Mage](img/mage_home.jpg)
 
 
 ## Getting Started
