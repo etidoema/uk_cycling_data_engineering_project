@@ -67,5 +67,19 @@ Here, we're creating an app using Google Cloud Run and setting up persistent sto
 
 ##### This will be the result. :
 
+![gcloud_cli_authentication](img/gcs_confirm.png)
+
+
+Now that we've completed the previous steps, let's add permissions in Google Cloud for our Mage. The required permissions are as follows:
+
+- Artifact Registry Reader
+- Artifact Registry Writer
+- Cloud Run Developer
+- Cloud SQL Admin
+- Service Account Token
+
+![Permissions](img/permissions.png)
+
+
 
 
