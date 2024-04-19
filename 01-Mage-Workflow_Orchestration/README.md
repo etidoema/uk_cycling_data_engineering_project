@@ -197,5 +197,5 @@ def export_data_to_google_cloud_storage(df: DataFrame, **kwargs) -> None:
     )
 ```
 
-The data has been exported to google cloud and also partitioned by day.
+#### The data has been exported to google cloud and also partitioned by day.
 
