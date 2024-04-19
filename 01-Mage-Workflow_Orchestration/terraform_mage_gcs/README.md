@@ -63,6 +63,9 @@ Here, we're creating an app using Google Cloud Run and setting up persistent sto
 
 1. This action will direct us to the authentication page of the `gcloud` CLI, where we can authenticate using our Gmail account and system credentials.
 
+![CLI_authentication](img/authentication.png)
+
+##### This will be the result. :
 
 
 
