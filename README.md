@@ -1,5 +1,7 @@
 # UK Cycling Data Engineering Project
 
+![Dashboard](mage_project1.jpg)
+
 ## Tech Stack
 - **Workflow Orchestration**: Mage
 - **Cloud**: GCP
