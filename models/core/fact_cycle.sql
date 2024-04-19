@@ -46,7 +46,7 @@ select
     monitoring_locations.longitude
 from trips_unioned
 
-left join dim_location as monitoring_locations
+inner join dim_location as monitoring_locations
 on trips_unioned.unqid = monitoring_locations.site_id
 
 
