@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: staging
+    database: majestic-legend-419120
+     # For postgres:
+      #database: production
+    schema: uk_cycling
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: external_central_partitoned
+      - name: external_cycleways_partitoned
+      - name: exernal_monitoring_location_data
+
+         # freshness:
+           # error_after: {count: 6, period: hour}
+
