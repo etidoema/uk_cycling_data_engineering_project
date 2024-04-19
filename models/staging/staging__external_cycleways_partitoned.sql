@@ -43,11 +43,6 @@ with cyclingdata as
       
       cast(__index_level_0__ as integer) as __index_level_0__
     from cyclingdata
-    where dn = 1
+    
 
--- dbt build --select <model_name> --vars '{'is_test_run': 'false'}'
-{% if var('is_test_run', default=true) %}
 
-  limit 100
-
-{% endif %}
