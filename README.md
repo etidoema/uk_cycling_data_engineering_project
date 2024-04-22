@@ -25,6 +25,9 @@ The task involves developing a dashboard with two tiles using the dataset provid
 
 2. **Pipeline for Data Warehousing**: Develop a pipeline to move the processed data from the datalake to a data warehouse in BigQuery.
 
+
+You can read about the project in this article : [UK Cycling Data Engineering end to end project)](https://medium.com/@1box/57da7da1e43a).
+
 3. **Data Transformation with dbt**: Transform the data within the data warehouse using dbt to prepare it for visualization on the dashboard.
 
 4. **Dashboard Visualization**: Build a dashboard to visualize the transformed data.
