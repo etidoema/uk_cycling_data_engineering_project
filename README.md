@@ -1,6 +1,6 @@
 # UK Cycling Data Engineering Project
 
-![Dashboard](img/mage_project1.jpg)
+![Dashboard](img/dta_gcp.jpeg)
 Credits : Edidiong Esu for the workflow image.
 
 ## Tech Stack
