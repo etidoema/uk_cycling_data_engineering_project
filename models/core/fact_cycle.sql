@@ -26,12 +26,10 @@ select
     trips_unioned.cycleid,
     trips_unioned.date,
     trips_unioned.time,
-    trips_unioned.year,
     trips_unioned.day,
     trips_unioned.hour,
     trips_unioned.day_of_week,
     trips_unioned.month,
-    trips_unioned.count,
     trips_unioned.cycling_count_description,
     trips_unioned.dir,
     trips_unioned.weather,
@@ -43,12 +41,14 @@ select
     monitoring_locations.easting__uk_grid_,
     monitoring_locations.northing__uk_grid_,
     monitoring_locations.latitude,
-    monitoring_locations.longitude
+    monitoring_locations.longitude,
+    trips_unioned.count
 from trips_unioned
 
 inner join dim_location as monitoring_locations
 on trips_unioned.unqid = monitoring_locations.site_id
 
+order by trips_unioned.date
 
 
 
