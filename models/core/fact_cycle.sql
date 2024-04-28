@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 
 with external_central_partitoned as (
     select *
@@ -27,9 +22,7 @@ select
     trips_unioned.date,
     trips_unioned.time,
     trips_unioned.day,
-    trips_unioned.hour,
     trips_unioned.day_of_week,
-    trips_unioned.month,
     trips_unioned.cycling_count_description,
     trips_unioned.dir,
     trips_unioned.weather,
