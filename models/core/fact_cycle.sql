@@ -18,7 +18,7 @@ trips_unioned as (
     select * from external_cycleways_partitoned
 ),
 dim_location as (
-    select * from {{ ref('dim_location') }}
+    select * from {{ ref('staging__exernal_monitoring_location_data') }}
 )
 
 select 
