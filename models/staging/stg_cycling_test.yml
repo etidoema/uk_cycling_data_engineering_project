@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: staging__external_central_partitoned
+    columns: 
+      - name: unqid
+        test:
+          - unique
+          - not_null
+      - name: status
+        test:
+          - accepted_value:
+              values:
+                - Northbound
+                - Southbound
+                - Eastbound
+                - Westbound
+
+  - name: staging__external_cycleways_partitoned
+    columns:
+      - name: unqid
+        test:
+          - unique
+          - not_null
+      - name: status
+        test:
+          - accepted_value:
+              values:
+                - Northbound
+                - Southbound
+                - Eastbound
+                - Westbound
+          
+          
