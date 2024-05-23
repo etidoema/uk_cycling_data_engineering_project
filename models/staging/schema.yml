@@ -13,7 +13,17 @@ sources:
 
     tables:
       - name: external_central_partitoned
+        columns : 
+          - name: unqid
+            tests:
+              - not_null
+                  
       - name: external_cycleways_partitoned
+        columns:
+          - name: unqid
+            tests:
+              - not_null
+                  
       - name: exernal_monitoring_location_data
         #freshness: null
       

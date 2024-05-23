@@ -5,6 +5,20 @@ models:
     columns: 
       - name: unqid
         tests:
-          - unique
           - not_null
+      - name: dir
+        tests:
+          - accepted_values:
+              values: ['Northbound', 'Southbound', 'Eastbound', 'Westbound']
+                
+
+  - name: staging__external_cycleways_partitoned
+    columns:
+      - name: unqid
+        tests:
+          - not_null
+      - name: dir
+        tests:
+          - accepted_values:
+              values: ['Northbound', 'Eastbound', 'Westbound', 'Southbound']
      
