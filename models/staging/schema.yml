@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: staging
+    description: A optimized uk cycling dataset 
     database: majestic-legend-419120
      # For postgres:
       #database: production
@@ -13,12 +14,14 @@ sources:
 
     tables:
       - name: external_central_partitoned
+        description: Uk central cycling dataset
         columns : 
           - name: unqid
             tests:
               - not_null
                   
       - name: external_cycleways_partitoned
+        description: UK external cycling dataset
         columns:
           - name: unqid
             tests:
