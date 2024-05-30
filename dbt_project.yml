@@ -38,5 +38,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   uk_cycling:
     # Applies to all files under models/example/
-    example:
+    core:
       +materialized: table
+    staging:
+      +materialized: view

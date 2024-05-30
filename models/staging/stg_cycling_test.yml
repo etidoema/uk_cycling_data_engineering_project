@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: staging__external_central_partitoned
+    description: One unique customer per row
+    columns: 
+      - name: unqid
+        description: primary key
+        tests:
+          - not_null
+      - name: dir
+        tests:
+          - accepted_values:
+              values: ['Northbound', 'Southbound', 'Eastbound', 'Westbound']
+                
+
+  - name: staging__external_cycleways_partitoned
+    columns:
+      - name: unqid
+        description: primary key
+        tests:
+          - not_null
+      - name: dir
+        description: "{{ doc('dir_status') }}"
+        tests:
+          - accepted_values:
+              values: ['Northbound', 'Eastbound', 'Westbound', 'Southbound']
+     

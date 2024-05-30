@@ -2,17 +2,34 @@ version: 2
 
 sources:
   - name: staging
+    description: A optimized uk cycling dataset 
     database: majestic-legend-419120
      # For postgres:
       #database: production
     schema: uk_cycling
+    #freshness:
+          #warn_after: {count: 3, period: hour}
+          #error_after: {count: 6, period: hour}
+    #loaded_at_field: date
 
-      # loaded_at_field: record_loaded_at
     tables:
       - name: external_central_partitoned
+        description: Uk central cycling dataset
+        columns : 
+          - name: unqid
+            tests:
+              - not_null
+                  
       - name: external_cycleways_partitoned
+        description: UK external cycling dataset
+        columns:
+          - name: unqid
+            tests:
+              - not_null
+                  
       - name: exernal_monitoring_location_data
-
-         # freshness:
-           # error_after: {count: 6, period: hour}
+        #freshness: null
+      
+        
+        
 
